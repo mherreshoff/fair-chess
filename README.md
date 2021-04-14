@@ -12,3 +12,8 @@ In an attempt to avoid this problem, the _FairChess_ variant uses the same rules
 
 My hope is that this will allow for balanced games resembling ordinary chess games sufficiently to make experienced players comfortable, while decreasing the extent to which competitive play depends on memorizing opening books.
 
+## How to rebuild the positions yourself.
+
+First you need to install [python3](https://www.python.org/download/releases/3.0/).  Once you have that you can install the `python-chess` library which the code depends on with the command `pip3 install python-chess`.
+
+To build out the candidate positions run `python3 calculate.py 8` to build out the tree.  *Warning*: the script will run high-depth evaluations on many thousands of positions so this may take hours.  Finally `python3 export.py 8` will filter the results for the relatively fair positions and output a json file containing just the fair positions.
